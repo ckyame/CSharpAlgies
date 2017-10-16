@@ -1,0 +1,4 @@
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL\bin\Debug\NL.dll
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL\bin\Debug\NL.pdb
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL\obj\Debug\NL.dll
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL\obj\Debug\NL.pdb

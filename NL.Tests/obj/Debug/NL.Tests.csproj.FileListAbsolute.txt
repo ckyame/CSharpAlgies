@@ -1,0 +1,7 @@
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\bin\Debug\NL.Tests.dll
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\bin\Debug\NL.Tests.pdb
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\bin\Debug\NL.dll
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\bin\Debug\NL.pdb
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\obj\Debug\NL.Tests.csprojResolveAssemblyReference.cache
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\obj\Debug\NL.Tests.dll
+\\nlserver21\redirectedfolders\ckyame\my documents\visual studio 2015\Projects\NL\NL.Tests\obj\Debug\NL.Tests.pdb

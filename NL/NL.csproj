@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{049A7224-D2C8-4B3F-AD29-A45D9E827744}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NL</RootNamespace>
+    <AssemblyName>NL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alg\Common\Common.cs" />
+    <Compile Include="Alg\Compare\Compare.cs" />
+    <Compile Include="Alg\Sorting\BinarySearchTreeSorter.cs" />
+    <Compile Include="Alg\Sorting\BubbleSorter.cs" />
+    <Compile Include="Alg\Sorting\BucketSorter.cs" />
+    <Compile Include="Alg\Sorting\CombSorter.cs" />
+    <Compile Include="Alg\Sorting\CountingSorter.cs" />
+    <Compile Include="Alg\Sorting\CycleSorter.cs" />
+    <Compile Include="Alg\Sorting\GnomeSort.cs" />
+    <Compile Include="Alg\Sorting\HeapSorter.cs" />
+    <Compile Include="Alg\Sorting\InsertionSort.cs" />
+    <Compile Include="Alg\Sorting\LSDRadixSorter.cs" />
+    <Compile Include="Alg\Sorting\MergeSorter.cs" />
+    <Compile Include="Alg\Sorting\OddEvenSorter.cs" />
+    <Compile Include="Alg\Sorting\PigeonHoleSorter.cs" />
+    <Compile Include="Alg\Sorting\QuickSorter.cs" />
+    <Compile Include="Alg\Sorting\SelectionSort.cs" />
+    <Compile Include="Alg\Sorting\ShellSorter.cs" />
+    <Compile Include="Alg\Validation\Validation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
