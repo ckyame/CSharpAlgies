@@ -7,15 +7,18 @@ namespace NL.Alg.Sorting
     public static class CombSorter
     {
         private static double GAP = 1.247330950103979;
-
+        /// <summary>
+        /// Comb sort source, will default to ASC
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="comparer"></param>
         public static void CombSort<T>(this IList<T> source, Comparer<T> comparer = null)
         {
-            comparer = comparer ?? Comparer<T>.Default;
-            source.ShellSortAscending(comparer);
+            source.ShellSortAscending(comparer ?? Comparer<T>.Default);
         }
-
         /// <summary>
-        /// Sorts ascending
+        /// Sorts ASC
         /// </summary>
         public static void CombSortAscending<T>(this IList<T> source, Comparer<T> comparer)
         {
@@ -40,7 +43,7 @@ namespace NL.Alg.Sorting
             }
         }
         /// <summary>
-        /// Sorts descending
+        /// Sorts DESC
         /// </summary>
         public static void CombSortDescending<T>(this IList<T> source, Comparer<T> comparer)
         {

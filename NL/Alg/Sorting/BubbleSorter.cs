@@ -6,12 +6,18 @@ namespace NL.Alg.Sorting
 {
     public static class BubbleSorter
     {
+        /// <summary>
+        /// Bubble Sort collection. Defaults to ASC
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="comparer"></param>
         public static void BubbleSort<T>(this IList<T> source, Comparer<T> comparer = null)
         {
             source.BubbleSortAscending(comparer ?? Comparer<T>.Default);
         }
         /// <summary>
-        /// Sorts ascending
+        /// Sorts ASC
         /// </summary>
         public static void BubbleSortAscending<T>(this IList<T> source, Comparer<T> comparer)
         {
@@ -27,7 +33,7 @@ namespace NL.Alg.Sorting
             }
         }
         /// <summary>
-        /// Sorts descending
+        /// Sorts DESC
         /// </summary>
         public static void BubbleSortDescending<T>(this IList<T> source, Comparer<T> comparer)
         {

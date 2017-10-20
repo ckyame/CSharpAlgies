@@ -1,22 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 using NL.Alg.Common;
 
 namespace NL.Alg.Sorting
 {
     public static class SelectionSorter
     {
+        /// <summary>
+        /// Selection sort the collection. 
+        /// Defaults to ASC
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="comparer"></param>
         public static void SelectionSort<T>(this IList<T> collection, Comparer<T> comparer = null)
         {
-            comparer = comparer ?? Comparer<T>.Default;
-            collection.SelectionSortAscending(comparer);
+            collection.SelectionSortAscending(comparer ?? Comparer<T>.Default);
         }
-
         /// <summary>
-        /// Public API: Sorts ascending
+        /// Sorts ASC
         /// </summary>
         public static void SelectionSortAscending<T>(this IList<T> collection, Comparer<T> comparer)
         {
@@ -32,9 +34,8 @@ namespace NL.Alg.Sorting
                 collection.Swap(i, min);
             }
         }
-
         /// <summary>
-        /// Public API: Sorts ascending
+        /// Sorts DESC
         /// </summary>
         public static void SelectionSortDescending<T>(this IList<T> collection, Comparer<T> comparer)
         {

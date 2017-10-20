@@ -1,22 +1,23 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NL.Alg.Sorting
 {
-    /// <summary>
-    /// Only support IList<int> Sort
-    /// Also called CountSort (not CountingSort)
-    /// </summary>
     public static class PigeonHoleSorter
     {
+        /// <summary>
+        /// Pigeon Hole Sort the Collection.
+        /// Defaults to ASC
+        /// </summary>
+        /// <param name="collection"></param>
         public static void PigeonHoleSort(this IList<int> collection)
         {
             collection.PigeonHoleSortAscending();
         }
-
+        /// <summary>
+        /// Pigeon Hole ASC Sort
+        /// </summary>
+        /// <param name="collection"></param>
         public static void PigeonHoleSortAscending(this IList<int> collection)
         {
             int min = collection.Min();
@@ -27,7 +28,6 @@ namespace NL.Alg.Sorting
             {
                 holes[x - min]++;
             }
-
             int i = 0;
             for (int count = 0; count < size; count++)
             {
@@ -38,7 +38,10 @@ namespace NL.Alg.Sorting
                 }
             }
         }
-
+        /// <summary>
+        /// Pigeon Hold DESC Sort
+        /// </summary>
+        /// <param name="collection"></param>
         public static void PigeonHoleSortDescending(this IList<int> collection)
         {
             int min = collection.Min();
@@ -49,7 +52,6 @@ namespace NL.Alg.Sorting
             {
                 holes[x - min]++;
             }
-
             int i = 0;
             for (int count = size - 1; count >= 0; count--)
             {

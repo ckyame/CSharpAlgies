@@ -1,36 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 using NL.Alg.Common;
 
 namespace NL.Alg.Sorting
 {
     public static class QuickSorter
     {
-        //
-        // The public APIs for the quick sort algorithm.
+        /// <summary>
+        /// Quick sort the collection.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="comparer"></param>
         public static void QuickSort<T>(this IList<T> collection, Comparer<T> comparer = null)
         {
             int startIndex = 0;
             int endIndex = collection.Count - 1;
-
-            //
-            // If the comparer is Null, then initialize it using a default typed comparer
-            comparer = comparer ?? Comparer<T>.Default;
-
-            collection.InternalQuickSort(startIndex, endIndex, comparer);
+            collection.InternalQuickSort(startIndex, endIndex, comparer ?? Comparer<T>.Default);
         }
-
-
-        //
-        // Private static method
-        // The recursive quick sort algorithm
+        /// <summary>
+        /// Recursive Quick Sort
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="leftmostIndex"></param>
+        /// <param name="rightmostIndex"></param>
+        /// <param name="comparer"></param>
         private static void InternalQuickSort<T>(this IList<T> collection, int leftmostIndex, int rightmostIndex, Comparer<T> comparer)
         {
-            //
-            // Recursive call check
             if (leftmostIndex < rightmostIndex)
             {
                 int wallIndex = collection.InternalPartition(leftmostIndex, rightmostIndex, comparer);
@@ -38,11 +35,15 @@ namespace NL.Alg.Sorting
                 collection.InternalQuickSort(wallIndex + 1, rightmostIndex, comparer);
             }
         }
-
-
-        //
-        // Private static method
-        // The partition function, used in the quick sort algorithm
+        /// <summary>
+        /// Partition Quick Sort
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="leftmostIndex"></param>
+        /// <param name="rightmostIndex"></param>
+        /// <param name="comparer"></param>
+        /// <returns></returns>
         private static int InternalPartition<T>(this IList<T> collection, int leftmostIndex, int rightmostIndex, Comparer<T> comparer)
         {
             int wallIndex, pivotIndex;
@@ -69,6 +70,5 @@ namespace NL.Alg.Sorting
 
             return wallIndex;
         }
-
     }
 }

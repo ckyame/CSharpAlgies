@@ -5,18 +5,13 @@ namespace NL.Alg.Sorting
 {
     public static class LSDRadixSorter
     {
-        /// <summary>
-        /// Extension method for sorting strings.
-        /// </summary>
         public static string LSDRadixSort(this string source)
         {
             if (string.IsNullOrEmpty(source) || source.Length <= 1)
                 return source;
-
             // LSD Radix Sort the character arrapy representation of the string
             var charArray = source.ToCharArray();
             charArray.LSDRadixSort();
-
             return new String(charArray);
         }
         /// <summary>

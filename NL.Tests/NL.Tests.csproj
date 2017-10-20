@@ -57,6 +57,9 @@
     <Compile Include="Alg\Compare\CompareTests.cs" />
     <Compile Include="Alg\Sorting\SortingTests.cs" />
     <Compile Include="Alg\Validation\ValidationTests.cs" />
+    <Compile Include="Performance\LargeSortPerformance.cs" />
+    <Compile Include="Performance\ShortSortPerformance.cs" />
+    <Compile Include="Performance\TooLargePerformance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

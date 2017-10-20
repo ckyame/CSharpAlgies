@@ -1,38 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 using NL.Alg.Common;
 
 namespace NL.Alg.Sorting
 {
-    /// <summary>
-    /// Also called Stupid Sort
-    /// </summary>
     public static class GnomeSorter
     {
-        public static void GnomeSort<T>(this IList<T> collection, Comparer<T> comparer = null)
-        {
-            comparer = comparer ?? Comparer<T>.Default;
-            collection.GnomeSortAscending(comparer);
-        }
-
         /// <summary>
-        /// Public API: Sorts ascending
+        /// Gnome sort the source. Will default to ASC
         /// </summary>
-        public static void GnomeSortAscending<T>(this IList<T> collection, Comparer<T> comparer)
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="comparer"></param>
+        public static void GnomeSort<T>(this IList<T> source, Comparer<T> comparer = null)
+        {
+            source.GnomeSortAscending(comparer ?? Comparer<T>.Default);
+        }
+        /// <summary>
+        /// Sorts ASC
+        /// </summary>
+        public static void GnomeSortAscending<T>(this IList<T> source, Comparer<T> comparer)
         {
             int pos = 1;
-            while (pos < collection.Count)
+            while (pos < source.Count)
             {
-                if (comparer.Compare(collection[pos], collection[pos - 1]) >= 0)
+                if (comparer.Compare(source[pos], source[pos - 1]) >= 0)
                 {
                     pos++;
                 }
                 else
                 {
-                    collection.Swap(pos, pos - 1);
+                    source.Swap(pos, pos - 1);
                     if (pos > 1)
                     {
                         pos--;
@@ -40,22 +38,21 @@ namespace NL.Alg.Sorting
                 }
             }
         }
-
         /// <summary>
-        /// Public API: Sorts descending
+        /// Sorts DEC
         /// </summary>
-        public static void GnomeSortDescending<T>(this IList<T> collection, Comparer<T> comparer)
+        public static void GnomeSortDescending<T>(this IList<T> source, Comparer<T> comparer)
         {
             int pos = 1;
-            while (pos < collection.Count)
+            while (pos < source.Count)
             {
-                if (comparer.Compare(collection[pos], collection[pos - 1]) <= 0)
+                if (comparer.Compare(source[pos], source[pos - 1]) <= 0)
                 {
                     pos++;
                 }
                 else
                 {
-                    collection.Swap(pos, pos - 1);
+                    source.Swap(pos, pos - 1);
                     if (pos > 1)
                     {
                         pos--;

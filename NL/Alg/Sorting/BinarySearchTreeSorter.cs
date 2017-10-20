@@ -8,7 +8,7 @@ namespace NL.Alg.Sorting
     public static class BinarySearchTreeSorter
     {
         /// <summary>
-        /// Unbalanced Binary Search Tree sort.
+        /// Unbalanced Binary Search 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="collection"></param>
@@ -51,7 +51,7 @@ namespace NL.Alg.Sorting
             rootref = root = null;
         }
         /// <summary>
-        /// Used to travel a node's subtrees and add the elements to the collection.
+        /// In Order Traversal
         /// </summary>
         /// <typeparam name="T">Type of tree elements.</typeparam>
         /// <param name="currentNode">Node to start from.</param>
@@ -65,7 +65,7 @@ namespace NL.Alg.Sorting
             _inOrderTravelAndAdd<T>(currentNode.Right, ref list);
         }
         /// <summary>
-        /// Minimal BST Node class, used only for unbalanced binary search tree sort.
+        /// Tree Node 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         private class Node<T> : IComparable<Node<T>> where T : IComparable<T>
